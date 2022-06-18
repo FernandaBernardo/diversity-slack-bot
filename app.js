@@ -79,6 +79,10 @@ const applyListeners = (patterns) => {
         console.error(error);
       }
     });
+
+    app.event('app_home_opened', ({ event, say }) => {
+      say(`Hello world, <@${event.user}>!`);
+    });
   }
 };
 
